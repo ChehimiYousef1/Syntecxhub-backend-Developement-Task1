@@ -31,10 +31,15 @@ const options = {
         email: "Youssef@openmindsaihamburg.com"
       }
     }
+   servers: [
+      {
+        url: "https://syntecxhub-api.onrender.com",
+        description: "Production server"
+      }
+    ]
   },
-  apis: ["./src/index.js", "./src/routes/*.js"]
+  apis: ["./src/routes/*.js"]
 };
-
 const specs = swaggerJsdoc(options);
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
