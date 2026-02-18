@@ -26,11 +26,11 @@ const options = {
       version: "1.0.0",
       description:
         "Users CRUD API for Syntecxhub.\n\nDeveloper: Youssef El Chehimi",
-      contact: {
+       contact: {
         name: "Youssef El Chehimi",
         email: "Youssef@openmindsaihamburg.com"
       }
-    }
+    },
    servers: [
       {
         url: "https://syntecxhub-api.onrender.com",
@@ -40,6 +40,7 @@ const options = {
   },
   apis: ["./src/routes/*.js"]
 };
+console.log(`🚀 Running on ${PORT}`);
 const specs = swaggerJsdoc(options);
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
@@ -135,3 +136,5 @@ const startServer = async () => {
 };
 
 startServer();
+
+
